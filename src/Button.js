@@ -10,11 +10,11 @@ export default class MyButton extends React.Component {
 		// this.handleClick = this.handleClick.bind(this);
 	}	
 
-	handleClick = () => {
+	 handleClick(test) {
 		// console.log("test");
 
 		let newState = this.state.btnState == "off" ? "on" : "off";
-		console.log(newState);
+		console.log(test);
 		
 		this.setState({
 			btnState: newState
@@ -23,7 +23,7 @@ export default class MyButton extends React.Component {
 
 	render(){
 		return (
-				<button onClick = {this.handleClick}>{this.state.btnState}</button>
+				<button onClick = {() => this.handleClick("testing")}>{this.state.btnState}</button>
 			);
 	}
 } 
