@@ -5,6 +5,7 @@ import App from './App';
 import Clock from './Clock';
 import Form from './Form';
 import MyButton from './Button';
+import Calculator from './Calculator';
 import reportWebVitals from './reportWebVitals';
 
 
@@ -13,27 +14,35 @@ const user = {
 	"surname": "Thakkar" 
 };
 
-function formatName(user){
-	return user.name + " " + user.surname;
-}
-
-function Welcome(props) {
-	return <div>
-		<h1>
-			Testing is going on 
-		</h1> 
-		<Clock />
-		<Form />
-		<MyButton/>
-		</div>;
-}
-
 const name = 'Rudra';
 const element = (
 		<h1>
 			{formatName(user)} is here
 		</h1>
 	);
+
+function formatName(user){
+	return user.name + " " + user.surname;
+}
+
+//different ways of creating and using a react components
+function Welcome(props) {
+	return (
+		<div>
+			<h1>
+				Testing is going on 
+			</h1> 
+			<Clock />
+			<Form />
+			<MyButton/>
+			<Calculator/>
+			{element}
+		</div>
+		);
+}
+
+
+
 
 ReactDOM.render(
  	<Welcome/>,
