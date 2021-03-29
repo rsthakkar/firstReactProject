@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import Clock from './Clock';
+import Form from './Form';
 import MyButton from './Button';
 import reportWebVitals from './reportWebVitals';
 
@@ -17,7 +18,14 @@ function formatName(user){
 }
 
 function Welcome(props) {
-	return <h1>Testing is going on <Clock /><MyButton/></h1> ;
+	return <div>
+		<h1>
+			Testing is going on 
+		</h1> 
+		<Clock />
+		<Form />
+		<MyButton/>
+		</div>;
 }
 
 const name = 'Rudra';
